@@ -1,0 +1,5 @@
+db.sqlite3
+Pipfile.lock
+post/models.py
+post/views.py
+blog/urls.py
