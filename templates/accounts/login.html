@@ -1,0 +1,20 @@
+{% extends "partials/base.html"%}
+{% load crispy_forms_tags %}
+
+
+{% block navbar %}
+  {% include "partials/nav.html" %}
+{% endblock navbar %}
+
+
+{% block content %}
+
+
+<form methos="post">
+  {% csrf_token %}
+  {{ form|crispy }}
+  <input name="next",type="hidden",value={{next}}/>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  {% endblock content %}

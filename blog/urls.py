@@ -19,6 +19,8 @@ from apps.post import views as post_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('post/', include('apps.post.urls')),
+    path('accounts/', include('apps.accounts.urls')),
+
     path('', post_view.index, name='home'),
     ]
 
